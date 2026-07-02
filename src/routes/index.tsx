@@ -659,7 +659,7 @@ function Contact() {
                 <textarea
                   name="message"
                   rows={5}
-                  className="w-full bg-transparent border-b border-(--charcoal)/25 focus:border-gold outline-none py-3 font-light text-charcoal resize-none transition-colors"
+                  className="w-full bg-transparent border-b border-(--charcoal)/25 focus:border-gold outline-none py-3 font-light text-crunharcoal resize-none transition-colors"
                   placeholder="Tell us about your evening..."
                 />
               </div>
@@ -764,7 +764,7 @@ function HomePage() {
         <WhyChoose />
         <Services />
         <Gallery />
-        <Testimonials />
+       {/* <Testimonials /> */}
         <Process />
         <CtaBanner />
         <Contact />
