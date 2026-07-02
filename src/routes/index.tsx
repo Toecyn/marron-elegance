@@ -6,6 +6,7 @@ import m2 from "@/assets/m2.jpg";
 import m3 from "@/assets/m3.jpg";
 import m4 from "@/assets/m4.jpg";
 import m5 from "@/assets/m5.jpg";
+import m6 from "@/assets/m6.jpg";
 import heroImg from "@/assets/hero-ballroom.jpg";
 import tablescape from "@/assets/tablescape.jpg";
 import champagne from "@/assets/champagne.jpg";
@@ -403,6 +404,7 @@ function Gallery() {
     { src: m2, cat: "Team of Twelve", size: "col-span-2" },
     { src: champagne, cat: "VIP Toast", size: "" },
     { src: tablescape, cat: "Dining Detail", size: "" },
+    { src: m6, cat: "Excellence", size: "col-span-2" },
   ];
   return (
     <section id="gallery" className="py-28 md:py-40 bg-charcoal text-ivory">
@@ -639,9 +641,24 @@ function Contact() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const data = new FormData(form);
+
+              const message = [
+                `Full Name: ${data.get("name") || ""}`,
+                `Phone Number: ${data.get("phone") || ""}`,
+                `Email: ${data.get("email") || ""}`,
+                `Event Date: ${data.get("date") || ""}`,
+                `Event Type: ${data.get("eventType") || ""}`,
+                `Message: ${data.get("message") || ""}`,
+              ].join("\n");
+
+              const whatsappUrl = `https://wa.me/2348127936751?text=${encodeURIComponent(message)}`;
+              window.open(whatsappUrl, "_blank");
+
               setSent(true);
               setTimeout(() => setSent(false), 4500);
-              (e.target as HTMLFormElement).reset();
+              form.reset();
             }}
             className="reveal bg-white border border-(--gold)/25 p-8 md:p-12 shadow-[0_30px_80px_-40px_rgba(44,8,19,0.35)]"
           >
