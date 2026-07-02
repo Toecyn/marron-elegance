@@ -57,7 +57,7 @@ function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "bg-[color:var(--burgundy-deep)]/92 backdrop-blur-xl border-b border-[color:var(--gold)]/15 py-3"
+          ? "bg-burgundy-deep/92 backdrop-blur-xl border-b border-(--gold)/15 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -69,8 +69,8 @@ function Nav() {
             className={`transition-all duration-700 ${scrolled ? "h-11" : "h-14"} w-auto`}
           />
           <div className="hidden md:block leading-tight">
-            <div className="font-serif text-[color:var(--gold)] text-lg tracking-[0.28em]">MARRON</div>
-            <div className="text-[9px] tracking-[0.32em] text-[color:var(--champagne)]/70 uppercase">Events & Ushering</div>
+            <div className="font-serif text-gold text-lg tracking-[0.28em]">MARRON</div>
+            <div className="text-[9px] tracking-[0.32em] text-(--champagne)/70 uppercase">Events & Ushering</div>
           </div>
         </a>
 
@@ -79,7 +79,7 @@ function Nav() {
             <a
               key={n.href}
               href={n.href}
-              className="text-[11px] tracking-[0.28em] uppercase text-[color:var(--ivory)]/80 hover:text-[color:var(--gold)] transition-colors duration-500"
+              className="text-[11px] tracking-[0.28em] uppercase text-ivory/80 hover:text-gold transition-colors duration-500"
             >
               {n.label}
             </a>
@@ -87,16 +87,16 @@ function Nav() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="#contact" className="hidden md:inline-flex btn-gold !py-3 !px-6">Book Now</a>
+          <a href="#contact" className="hidden md:inline-flex btn-gold py-3! px-6!">Book Now</a>
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-[color:var(--gold)] p-2"
+            className="lg:hidden text-gold p-2"
             aria-label="Menu"
           >
             <div className="w-6 flex flex-col gap-1.5">
-              <span className={`h-px bg-current transition-all ${open ? "rotate-45 translate-y-[6px]" : ""}`} />
+              <span className={`h-px bg-current transition-all ${open ? "rotate-45 translate-y-1.5" : ""}`} />
               <span className={`h-px bg-current transition-all ${open ? "opacity-0" : ""}`} />
-              <span className={`h-px bg-current transition-all ${open ? "-rotate-45 -translate-y-[6px]" : ""}`} />
+              <span className={`h-px bg-current transition-all ${open ? "-rotate-45 -translate-y-1.5" : ""}`} />
             </div>
           </button>
         </div>
@@ -104,8 +104,8 @@ function Nav() {
 
       {/* mobile menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 bg-[color:var(--burgundy-deep)]/98 backdrop-blur-xl ${
-          open ? "max-h-[520px] border-t border-[color:var(--gold)]/15" : "max-h-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 bg-burgundy-deep/98 backdrop-blur-xl ${
+          open ? "max-h-130 border-t border-(--gold)/15" : "max-h-0"
         }`}
       >
         <div className="container-luxe py-8 flex flex-col gap-5">
@@ -114,7 +114,7 @@ function Nav() {
               key={n.href}
               href={n.href}
               onClick={() => setOpen(false)}
-              className="text-sm tracking-[0.3em] uppercase text-[color:var(--ivory)]/85 hover:text-[color:var(--gold)]"
+              className="text-sm tracking-[0.3em] uppercase text-ivory/85 hover:text-gold"
             >
               {n.label}
             </a>
@@ -128,7 +128,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-center overflow-hidden bg-[color:var(--burgundy-deep)]">
+    <section id="home" className="relative min-h-svh flex items-center overflow-hidden bg-burgundy-deep">
       <div className="absolute inset-0">
         <img
           src={heroImg}
@@ -154,28 +154,28 @@ function Hero() {
 
       {/* corner ornaments */}
       <div className="absolute top-28 left-6 md:left-12 hidden md:block">
-        <div className="w-16 h-px bg-[color:var(--gold)]/60" />
-        <div className="w-px h-16 bg-[color:var(--gold)]/60" />
+        <div className="w-16 h-px bg-(--gold)/60" />
+        <div className="w-px h-16 bg-(--gold)/60" />
       </div>
       <div className="absolute bottom-28 right-6 md:right-12 hidden md:block">
-        <div className="w-16 h-px bg-[color:var(--gold)]/60 ml-auto" />
-        <div className="w-px h-16 bg-[color:var(--gold)]/60 ml-auto" />
+        <div className="w-16 h-px bg-(--gold)/60 ml-auto" />
+        <div className="w-px h-16 bg-(--gold)/60 ml-auto" />
       </div>
 
       <div className="container-luxe relative z-10 pt-32 pb-24">
         <div className="max-w-4xl">
           <div className="reveal flex items-center gap-4 mb-8">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--gold)]">Luxury Event Staffing · Est. Nigeria</span>
+            <span className="eyebrow text-gold">Luxury Event Staffing · Est. Nigeria</span>
           </div>
 
-          <h1 className="reveal font-serif text-[color:var(--ivory)] text-[clamp(2.6rem,7vw,6.5rem)] leading-[0.98] font-light">
+          <h1 className="reveal font-serif text-ivory text-[clamp(2.6rem,7vw,6.5rem)] leading-[0.98] font-light">
             Luxury Event Staffing
             <br />
-            for <em className="italic text-[color:var(--gold)] font-light">Exceptional</em> Experiences.
+            for <em className="italic text-gold font-light">Exceptional</em> Experiences.
           </h1>
 
-          <p className="reveal mt-10 max-w-2xl text-[color:var(--ivory)]/75 text-lg leading-relaxed font-light">
+          <p className="reveal mt-10 max-w-2xl text-ivory/75 text-lg leading-relaxed font-light">
             MARRON Events and Ushering Agency provides professionally trained ushers, hostesses,
             and event staff who represent your brand with elegance, confidence, and the
             unwavering excellence your guests deserve.
@@ -191,12 +191,12 @@ function Hero() {
       {/* scroll indicator */}
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-[color:var(--gold)]/80"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-gold/80"
       >
         <span className="eyebrow text-[10px]">Scroll</span>
-        <div className="relative w-px h-14 bg-[color:var(--gold)]/25 overflow-hidden">
+        <div className="relative w-px h-14 bg-(--gold)/25 overflow-hidden">
           <span
-            className="absolute inset-x-0 top-0 h-4 bg-[color:var(--gold)]"
+            className="absolute inset-x-0 top-0 h-4 bg-gold"
             style={{ animation: "scroll-hint 2.2s ease-in-out infinite" }}
           />
         </div>
@@ -209,12 +209,12 @@ function Marquee() {
   const items = ["Luxury Weddings", "Corporate Galas", "Embassy Events", "Brand Activations", "VIP Receptions", "Fashion Shows", "Award Ceremonies"];
   const doubled = [...items, ...items];
   return (
-    <div className="bg-[color:var(--burgundy)] border-y border-[color:var(--gold)]/20 overflow-hidden py-6">
+    <div className="bg-burgundy border-y border-(--gold)/20 overflow-hidden py-6">
       <div className="flex gap-16 whitespace-nowrap" style={{ animation: "marquee 40s linear infinite", width: "max-content" }}>
         {doubled.map((it, i) => (
           <div key={i} className="flex items-center gap-16">
-            <span className="font-serif italic text-[color:var(--gold)]/90 text-xl md:text-2xl tracking-wide">{it}</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--gold)]/50" />
+            <span className="font-serif italic text-gold/90 text-xl md:text-2xl tracking-wide">{it}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-(--gold)/50" />
           </div>
         ))}
       </div>
@@ -230,31 +230,31 @@ function About() {
     { n: "12+", l: "Years Refined" },
   ];
   return (
-    <section id="about" className="py-28 md:py-40 bg-[color:var(--ivory)]">
+    <section id="about" className="py-28 md:py-40 bg-ivory">
       <div className="container-luxe grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
         <div className="lg:col-span-5 relative">
-          <div className="image-reveal relative aspect-[3/4] overflow-hidden">
+          <div className="image-reveal relative aspect-3/4 overflow-hidden">
             <img src={m3} alt="Marron ushers" className="w-full h-full object-cover" loading="lazy" />
           </div>
-          <div className="image-reveal absolute -bottom-10 -right-4 md:-right-10 w-2/3 aspect-[4/5] overflow-hidden border-8 border-[color:var(--ivory)] shadow-[0_30px_60px_-20px_rgba(44,8,19,0.35)]">
+          <div className="image-reveal absolute -bottom-10 -right-4 md:-right-10 w-2/3 aspect-4/5 overflow-hidden border-8 border-ivory shadow-[0_30px_60px_-20px_rgba(44,8,19,0.35)]">
             <img src={tablescape} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="absolute -top-6 -left-6 hidden md:block">
-            <div className="w-24 h-px bg-[color:var(--gold)]" />
-            <div className="w-px h-24 bg-[color:var(--gold)]" />
+            <div className="w-24 h-px bg-gold" />
+            <div className="w-px h-24 bg-gold" />
           </div>
         </div>
 
         <div className="lg:col-span-7">
           <div className="reveal flex items-center gap-4 mb-6">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--burgundy)]">About the House</span>
+            <span className="eyebrow text-burgundy">About the House</span>
           </div>
-          <h2 className="reveal font-serif text-[color:var(--burgundy)] text-4xl md:text-6xl leading-[1.02] font-light">
+          <h2 className="reveal font-serif text-burgundy text-4xl md:text-6xl leading-[1.02] font-light">
             An atelier of hospitality,
-            <em className="italic text-[color:var(--gold-soft)]"> quietly obsessed</em> with the details others overlook.
+            <em className="italic text-gold-soft"> quietly obsessed</em> with the details others overlook.
           </h2>
-          <div className="reveal mt-10 space-y-6 text-[color:var(--charcoal)]/75 text-lg leading-relaxed font-light max-w-2xl">
+          <div className="reveal mt-10 space-y-6 text-(--charcoal)/75 text-lg leading-relaxed font-light max-w-2xl">
             <p>
               MARRON is a boutique event staffing house serving discerning hosts, luxury wedding
               planners, embassies and international brands across Nigeria. Our ushers and
@@ -267,11 +267,12 @@ function About() {
               becomes an expression of the standard you set.
             </p>
           </div>
+
           {/*
           <div className="reveal mt-14 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[color:var(--gold)]/30 pt-10">
             {stats.map((s) => (
               <div key={s.l}>
-                <div className="font-serif text-[color:var(--burgundy)] text-4xl md:text-5xl font-light">
+                <div className="font-serif text-burgundy text-4xl md:text-5xl font-light">
                   {s.n}
                 </div>
                 <div className="mt-2 text-[10px] tracking-[0.3em] uppercase text-[color:var(--charcoal)]/60">
@@ -296,7 +297,7 @@ function WhyChoose() {
     { n: "06", t: "White Glove Experience", d: "From arrival to farewell, we curate the quiet luxury your guests will remember." },
   ];
   return (
-    <section className="py-28 md:py-40 bg-[color:var(--burgundy-deep)] text-[color:var(--ivory)] relative overflow-hidden">
+    <section className="py-28 md:py-40 bg-burgundy-deep text-ivory relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-30 pointer-events-none"
         style={{
@@ -308,24 +309,24 @@ function WhyChoose() {
         <div className="max-w-3xl mb-20">
           <div className="reveal flex items-center gap-4 mb-6">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--gold)]">Why Marron</span>
+            <span className="eyebrow text-gold">Why Marron</span>
           </div>
           <h2 className="reveal font-serif text-4xl md:text-6xl font-light leading-[1.05]">
             Six principles that
-            <em className="italic text-[color:var(--gold)]"> shape</em> every event we serve.
+            <em className="italic text-gold"> shape</em> every event we serve.
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--gold)]/15">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-(--gold)/15">
           {items.map((it) => (
-            <div key={it.n} className="reveal group bg-[color:var(--burgundy-deep)] p-10 md:p-12 transition-all duration-700 hover:bg-[color:var(--burgundy)]">
+            <div key={it.n} className="reveal group bg-burgundy-deep p-10 md:p-12 transition-all duration-700 hover:bg-burgundy">
               <div className="flex items-baseline justify-between mb-8">
-                <span className="font-serif text-[color:var(--gold)]/70 text-2xl">{it.n}</span>
-                <span className="h-px w-12 bg-[color:var(--gold)]/40 group-hover:w-20 transition-all duration-700" />
+                <span className="font-serif text-gold/70 text-2xl">{it.n}</span>
+                <span className="h-px w-12 bg-(--gold)/40 group-hover:w-20 transition-all duration-700" />
               </div>
-              <h3 className="font-serif text-2xl md:text-[26px] leading-snug mb-4 text-[color:var(--ivory)]">
+              <h3 className="font-serif text-2xl md:text-[26px] leading-snug mb-4 text-ivory">
                 {it.t}
               </h3>
-              <p className="text-[color:var(--ivory)]/65 font-light leading-relaxed">{it.d}</p>
+              <p className="text-ivory/65 font-light leading-relaxed">{it.d}</p>
             </div>
           ))}
         </div>
@@ -346,32 +347,32 @@ function Services() {
     { t: "Event Coordination Support", d: "Floor captains and coordinators who partner seamlessly with your planner." },
   ];
   return (
-    <section id="services" className="py-28 md:py-40 bg-[color:var(--ivory)] relative">
+    <section id="services" className="py-28 md:py-40 bg-ivory relative">
       <div className="container-luxe">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20">
           <div className="max-w-2xl">
             <div className="reveal flex items-center gap-4 mb-6">
               <span className="gold-line" />
-              <span className="eyebrow text-[color:var(--burgundy)]">The Services</span>
+              <span className="eyebrow text-burgundy">The Services</span>
             </div>
-            <h2 className="reveal font-serif text-[color:var(--burgundy)] text-4xl md:text-6xl leading-[1.03] font-light">
-              A complete <em className="italic text-[color:var(--gold-soft)]">discipline</em> of front-of-house.
+            <h2 className="reveal font-serif text-burgundy text-4xl md:text-6xl leading-[1.03] font-light">
+              A complete <em className="italic ">discipline</em> of front-of-house.
             </h2>
           </div>
-          <p className="reveal text-[color:var(--charcoal)]/70 max-w-md font-light leading-relaxed">
+          <p className="reveal text-(--charcoal)/70 max-w-md font-light leading-relaxed">
             Curated staffing solutions for hosts and planners who understand that atmosphere is
             engineered, one refined interaction at a time.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--gold)]/25">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-(--gold)/25">
           {services.map((s, i) => (
             <div
               key={s.t}
-              className="reveal group relative bg-[color:var(--ivory)] p-10 min-h-[280px] flex flex-col justify-between transition-all duration-700 hover:bg-[color:var(--burgundy)] hover:text-[color:var(--ivory)] cursor-pointer overflow-hidden"
+              className="reveal group relative bg-ivory p-10 min-h-70 flex flex-col justify-between transition-all duration-700 hover:bg-burgundy hover:text-ivory cursor-pointer overflow-hidden"
             >
               <div className="flex items-start justify-between">
-                <span className="font-serif text-[color:var(--gold-soft)] group-hover:text-[color:var(--gold)] text-sm tracking-[0.3em]">
+                <span className="font-serif text-gold-soft group-hover:text-gold text-sm tracking-[0.3em]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="w-6 h-6 rounded-full border border-current opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
@@ -405,21 +406,21 @@ function Gallery() {
     { src: tablescape, cat: "Dining Detail", size: "" },
   ];
   return (
-    <section id="gallery" className="py-28 md:py-40 bg-[color:var(--charcoal)] text-[color:var(--ivory)]">
+    <section id="gallery" className="py-28 md:py-40 bg-charcoal text-ivory">
       <div className="container-luxe">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
           <div>
             <div className="reveal flex items-center gap-4 mb-6">
               <span className="gold-line" />
-              <span className="eyebrow text-[color:var(--gold)]">The Portfolio</span>
+              <span className="eyebrow text-gold">The Portfolio</span>
             </div>
             <h2 className="reveal font-serif text-4xl md:text-6xl font-light leading-[1.03] max-w-2xl">
-              Moments from evenings <em className="italic text-[color:var(--gold)]">quietly perfected</em>.
+              Moments from evenings <em className="italic text-gold">quietly perfected</em>.
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[240px] gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-45 md:auto-rows-60 gap-3">
           {imgs.map((img, i) => (
             <button
               key={i}
@@ -430,11 +431,11 @@ function Gallery() {
                 src={img.src}
                 alt={img.cat}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-1400 ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--burgundy-deep)]/90 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
+              <div className="absolute inset-0 from-(--burgundy-deep)/90 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
               <div className="absolute inset-x-0 bottom-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
-                <span className="eyebrow text-[color:var(--gold)]">{img.cat}</span>
+                <span className="eyebrow text-gold">{img.cat}</span>
               </div>
             </button>
           ))}
@@ -443,11 +444,11 @@ function Gallery() {
 
       {active && (
         <div
-          className="fixed inset-0 z-[80] bg-[color:var(--burgundy-deep)]/95 backdrop-blur-md flex items-center justify-center p-4 md:p-10 animate-in fade-in"
+          className="fixed inset-0 z-80 bg-burgundy-deep/95 backdrop-blur-md flex items-center justify-center p-4 md:p-10 animate-in fade-in"
           onClick={() => setActive(null)}
         >
           <button
-            className="absolute top-6 right-6 text-[color:var(--gold)] text-sm tracking-[0.3em] uppercase"
+            className="absolute top-6 right-6 text-gold text-sm tracking-[0.3em] uppercase"
             onClick={() => setActive(null)}
           >
             Close ×
@@ -478,16 +479,16 @@ function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" className="py-28 md:py-40 bg-[color:var(--ivory)]">
+    <section id="testimonials" className="py-28 md:py-40 bg-ivory">
       <div className="container-luxe">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="reveal flex items-center justify-center gap-4 mb-6">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--burgundy)]">Client Voices</span>
+            <span className="eyebrow text-burgundy">Client Voices</span>
             <span className="gold-line" />
           </div>
-          <h2 className="reveal font-serif text-[color:var(--burgundy)] text-4xl md:text-6xl font-light leading-[1.02]">
-            Trusted by hosts who <em className="italic text-[color:var(--gold-soft)]">notice everything</em>.
+          <h2 className="reveal font-serif text-burgundy text-4xl md:text-6xl font-light leading-[1.02]">
+            Trusted by hosts who <em className="italic text-gold-soft">notice everything</em>.
           </h2>
         </div>
 
@@ -495,19 +496,19 @@ function Testimonials() {
           {items.map((t, i) => (
             <figure
               key={i}
-              className="reveal relative bg-white p-10 md:p-12 border border-[color:var(--gold)]/25 shadow-[0_20px_60px_-30px_rgba(44,8,19,0.25)] flex flex-col"
+              className="reveal relative bg-white p-10 md:p-12 border border-(--gold)/25 shadow-[0_20px_60px_-30px_rgba(44,8,19,0.25)] flex flex-col"
             >
-              <div className="text-[color:var(--gold)] text-lg tracking-[0.4em] mb-6">★ ★ ★ ★ ★</div>
-              <blockquote className="font-serif text-xl md:text-[22px] leading-[1.4] text-[color:var(--charcoal)]/85 italic font-light mb-8 flex-1">
+              <div className="text-gold text-lg tracking-[0.4em] mb-6">★ ★ ★ ★ ★</div>
+              <blockquote className="font-serif text-xl md:text-[22px] leading-[1.4] text-(--charcoal)/85 italic font-light mb-8 flex-1">
                 "{t.q}"
               </blockquote>
-              <figcaption className="pt-6 border-t border-[color:var(--gold)]/30">
-                <div className="font-serif text-[color:var(--burgundy)] text-lg">{t.a}</div>
-                <div className="text-[10px] tracking-[0.3em] uppercase text-[color:var(--charcoal)]/55 mt-1">
+              <figcaption className="pt-6 border-t border-(--gold)/30">
+                <div className="font-serif text-burgundy text-lg">{t.a}</div>
+                <div className="text-[10px] tracking-[0.3em] uppercase text-(--charcoal)/55 mt-1">
                   {t.r}
                 </div>
               </figcaption>
-              <span className="absolute -top-4 left-10 font-serif text-6xl text-[color:var(--gold)] leading-none">"</span>
+              <span className="absolute -top-4 left-10 font-serif text-6xl text-gold leading-none">"</span>
             </figure>
           ))}
         </div>
@@ -525,30 +526,30 @@ function Process() {
     { n: "05", t: "Exceptional Experience", d: "Your guests leave feeling considered, cared for and celebrated." },
   ];
   return (
-    <section id="process" className="py-28 md:py-40 bg-[color:var(--burgundy)] text-[color:var(--ivory)] relative overflow-hidden">
+    <section id="process" className="py-28 md:py-40 bg-burgundy text-ivory relative overflow-hidden">
       <div className="container-luxe">
         <div className="max-w-3xl mb-20">
           <div className="reveal flex items-center gap-4 mb-6">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--gold)]">The Process</span>
+            <span className="eyebrow text-gold">The Process</span>
           </div>
           <h2 className="reveal font-serif text-4xl md:text-6xl font-light leading-[1.03]">
             Five deliberate steps toward an
-            <em className="italic text-[color:var(--gold)]"> effortless</em> evening.
+            <em className="italic text-gold"> effortless</em> evening.
           </h2>
         </div>
 
         <div className="relative">
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-px bg-[color:var(--gold)]/25" />
+          <div className="hidden md:block absolute top-16 left-0 right-0 h-px bg-(--gold)/25" />
           <div className="grid md:grid-cols-5 gap-10 md:gap-6">
             {steps.map((s) => (
               <div key={s.n} className="reveal relative">
-                <div className="hidden md:block absolute top-[58px] left-0 w-3 h-3 rounded-full bg-[color:var(--gold)] shadow-[0_0_0_6px_rgba(212,175,55,0.15)]" />
-                <div className="font-serif text-[color:var(--gold)] text-6xl md:text-7xl font-light leading-none mb-8">
+                <div className="hidden md:block absolute top-14.5 left-0 w-3 h-3 rounded-full bg-gold shadow-[0_0_0_6px_rgba(212,175,55,0.15)]" />
+                <div className="font-serif text-gold text-6xl md:text-7xl font-light leading-none mb-8">
                   {s.n}
                 </div>
                 <h3 className="font-serif text-2xl mb-3 leading-tight">{s.t}</h3>
-                <p className="text-[color:var(--ivory)]/70 text-sm font-light leading-relaxed">{s.d}</p>
+                <p className="text-ivory/70 text-sm font-light leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
@@ -560,21 +561,21 @@ function Process() {
 
 function CtaBanner() {
   return (
-    <section className="relative py-28 md:py-40 overflow-hidden bg-[color:var(--burgundy-deep)]">
+    <section className="relative py-28 md:py-40 overflow-hidden bg-burgundy-deep">
       <div className="absolute inset-0">
         <img src={champagne} alt="" className="w-full h-full object-cover opacity-40" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--burgundy-deep)]/80 via-[color:var(--burgundy-deep)]/70 to-[color:var(--burgundy-deep)]/95" />
+        <div className="absolute inset-0 bg-linear-to-b from-(--burgundy-deep)/80 via-(--burgundy-deep)/70 to-(--burgundy-deep)/95" />
       </div>
       <div className="container-luxe relative text-center max-w-4xl mx-auto">
         <div className="reveal flex items-center justify-center gap-4 mb-8">
           <span className="gold-line" />
-          <span className="eyebrow text-[color:var(--gold)]">Reserve Your Date</span>
+          <span className="eyebrow text-gold">Reserve Your Date</span>
           <span className="gold-line" />
         </div>
-        <h2 className="reveal font-serif text-[color:var(--ivory)] text-4xl md:text-7xl font-light leading-[1.02]">
-          Let us <em className="italic text-[color:var(--gold)]">elevate</em> your next event.
+        <h2 className="reveal font-serif text-ivory text-4xl md:text-7xl font-light leading-[1.02]">
+          Let us <em className="italic text-gold">elevate</em> your next event.
         </h2>
-        <p className="reveal mt-8 text-[color:var(--ivory)]/70 max-w-xl mx-auto font-light text-lg">
+        <p className="reveal mt-8 text-ivory/70 max-w-xl mx-auto font-light text-lg">
           Availability for signature events is limited. Begin the conversation early to secure
           the Marron team for your date.
         </p>
@@ -590,44 +591,44 @@ function CtaBanner() {
 function Contact() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="contact" className="py-28 md:py-40 bg-[color:var(--ivory)]">
+    <section id="contact" className="py-28 md:py-40 bg-ivory">
       <div className="container-luxe grid lg:grid-cols-12 gap-16">
         <div className="lg:col-span-5">
           <div className="reveal flex items-center gap-4 mb-6">
             <span className="gold-line" />
-            <span className="eyebrow text-[color:var(--burgundy)]">Enquiries</span>
+            <span className="eyebrow text-burgundy">Enquiries</span>
           </div>
-          <h2 className="reveal font-serif text-[color:var(--burgundy)] text-4xl md:text-6xl font-light leading-[1.03]">
-            Begin the <em className="italic text-[color:var(--gold-soft)]">conversation</em>.
+          <h2 className="reveal font-serif text-burgundy text-4xl md:text-6xl font-light leading-[1.03]">
+            Begin the <em className="italic text-gold-soft">conversation</em>.
           </h2>
-          <p className="reveal mt-8 text-[color:var(--charcoal)]/70 font-light leading-relaxed max-w-md">
+          <p className="reveal mt-8 text-(--charcoal)/70 font-light leading-relaxed max-w-md">
             Share a few details about your event and our concierge will respond within one
             business day with availability and next steps.
           </p>
 
           <div className="reveal mt-14 space-y-8">
             <div>
-              <div className="eyebrow text-[color:var(--gold-soft)] mb-2">Phone</div>
-              <a href="tel:+2348127936751" className="font-serif text-2xl text-[color:var(--burgundy)] hover:text-[color:var(--gold-soft)] transition-colors">
+              <div className="eyebrow text-gold-soft mb-2">Phone</div>
+              <a href="tel:+2348127936751" className="font-serif text-2xl text-burgundy hover:text-gold-soft transition-colors">
                 +234 812 793 6751
               </a>
             </div>
             <div>
-              <div className="eyebrow text-[color:var(--gold-soft)] mb-2">Email</div>
+              <div className="eyebrow text-gold-soft mb-2">Email</div>
               <a
                 href="mailto:marroneventsandusheringagency@gmail.com"
-                className="font-serif text-lg md:text-xl text-[color:var(--burgundy)] hover:text-[color:var(--gold-soft)] transition-colors break-all"
+                className="font-serif text-lg md:text-xl text-burgundy hover:text-gold-soft transition-colors break-all"
               >
                 marroneventsandusheringagency@gmail.com
               </a>
             </div>
             <div>
-              <div className="eyebrow text-[color:var(--gold-soft)] mb-2">Social</div>
+              <div className="eyebrow text-gold-soft mb-2">Social</div>
               <div className="flex flex-col gap-2">
-                <a href="https://instagram.com/marroneventsandushering" target="_blank" rel="noopener" className="font-serif text-xl text-[color:var(--burgundy)] hover:text-[color:var(--gold-soft)] transition-colors">
+                <a href="https://instagram.com/marroneventsandushering" target="_blank" rel="noopener" className="font-serif text-xl text-burgundy hover:text-gold-soft transition-colors">
                   Instagram — @marroneventsandushering
                 </a>
-                <a href="#" className="font-serif text-xl text-[color:var(--burgundy)] hover:text-[color:var(--gold-soft)] transition-colors">
+                <a href="#" className="font-serif text-xl text-burgundy hover:text-gold-soft transition-colors">
                   Facebook — Marron Events And Ushering Agency
                 </a>
               </div>
@@ -643,7 +644,7 @@ function Contact() {
               setTimeout(() => setSent(false), 4500);
               (e.target as HTMLFormElement).reset();
             }}
-            className="reveal bg-white border border-[color:var(--gold)]/25 p-8 md:p-12 shadow-[0_30px_80px_-40px_rgba(44,8,19,0.35)]"
+            className="reveal bg-white border border-(--gold)/25 p-8 md:p-12 shadow-[0_30px_80px_-40px_rgba(44,8,19,0.35)]"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <Field label="Full Name" name="name" required />
@@ -654,11 +655,11 @@ function Contact() {
                 <Field label="Event Type" name="eventType" placeholder="Wedding · Corporate · Gala · Brand Activation" />
               </div>
               <div className="md:col-span-2">
-                <label className="eyebrow text-[color:var(--charcoal)]/60 block mb-3">Message</label>
+                <label className="eyebrow text-(--charcoal)/60 block mb-3">Message</label>
                 <textarea
                   name="message"
                   rows={5}
-                  className="w-full bg-transparent border-b border-[color:var(--charcoal)]/25 focus:border-[color:var(--gold)] outline-none py-3 font-light text-[color:var(--charcoal)] resize-none transition-colors"
+                  className="w-full bg-transparent border-b border-(--charcoal)/25 focus:border-gold outline-none py-3 font-light text-charcoal resize-none transition-colors"
                   placeholder="Tell us about your evening..."
                 />
               </div>
@@ -667,7 +668,7 @@ function Contact() {
               Send Enquiry
             </button>
             {sent && (
-              <p className="mt-6 text-[color:var(--gold-soft)] text-sm tracking-widest uppercase">
+              <p className="mt-6 text-gold-soft text-sm tracking-widest uppercase">
                 Thank you — your enquiry has been received.
               </p>
             )}
@@ -693,15 +694,15 @@ function Field({
 }) {
   return (
     <div>
-      <label className="eyebrow text-[color:var(--charcoal)]/60 block mb-3">
-        {label} {required && <span className="text-[color:var(--gold-soft)]">*</span>}
+      <label className="eyebrow text-(--charcoal)/60 block mb-3">
+        {label} {required && <span className="text-gold-soft">*</span>}
       </label>
       <input
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full bg-transparent border-b border-[color:var(--charcoal)]/25 focus:border-[color:var(--gold)] outline-none py-3 font-light text-[color:var(--charcoal)] placeholder:text-[color:var(--charcoal)]/30 transition-colors"
+        className="w-full bg-transparent border-b border-(--charcoal)/25 focus:border-gold outline-none py-3 font-light text-charcoal placeholder:text-(--charcoal)/30 transition-colors"
       />
     </div>
   );
@@ -709,23 +710,23 @@ function Field({
 
 function Footer() {
   return (
-    <footer className="bg-[color:var(--burgundy-deep)] text-[color:var(--ivory)] pt-24 pb-10 border-t border-[color:var(--gold)]/15">
+    <footer className="bg-burgundy-deep text-ivory pt-24 pb-10 border-t border-(--gold)/15">
       <div className="container-luxe">
-        <div className="grid md:grid-cols-12 gap-14 pb-16 border-b border-[color:var(--gold)]/15">
+        <div className="grid md:grid-cols-12 gap-14 pb-16 border-b border-(--gold)/15">
           <div className="md:col-span-5">
             <img src={logoUrl} alt="Marron" className="h-24 w-auto mb-6" />
-            <p className="font-serif italic text-[color:var(--gold)] text-xl mb-4">Where elegance meets service.</p>
-            <p className="text-[color:var(--ivory)]/60 max-w-sm font-light leading-relaxed">
+            <p className="font-serif italic text-gold text-xl mb-4">Where elegance meets service.</p>
+            <p className="text-ivory/60 max-w-sm font-light leading-relaxed">
               MARRON Events and Ushering Agency — Nigeria's boutique house of luxury event
               staffing, hostesses and coordinated front-of-house.
             </p>
           </div>
           <div className="md:col-span-3">
-            <div className="eyebrow text-[color:var(--gold)] mb-6">Navigate</div>
+            <div className="eyebrow text-gold mb-6">Navigate</div>
             <ul className="space-y-3 font-light">
               {NAV.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="text-[color:var(--ivory)]/70 hover:text-[color:var(--gold)] transition-colors">
+                  <a href={n.href} className="text-ivory/70 hover:text-gold transition-colors">
                     {n.label}
                   </a>
                 </li>
@@ -733,16 +734,16 @@ function Footer() {
             </ul>
           </div>
           <div className="md:col-span-4">
-            <div className="eyebrow text-[color:var(--gold)] mb-6">Contact</div>
-            <ul className="space-y-3 font-light text-[color:var(--ivory)]/70">
-              <li><a href="tel:+2348127936751" className="hover:text-[color:var(--gold)]">+234 812 793 6751</a></li>
-              <li><a href="mailto:marroneventsandusheringagency@gmail.com" className="hover:text-[color:var(--gold)] break-all">marroneventsandusheringagency@gmail.com</a></li>
-              <li><a href="https://instagram.com/marroneventsandushering" className="hover:text-[color:var(--gold)]">Instagram · @marroneventsandushering</a></li>
-              <li><a href="#" className="hover:text-[color:var(--gold)]">Facebook · Marron Events And Ushering</a></li>
+            <div className="eyebrow text-gold mb-6">Contact</div>
+            <ul className="space-y-3 font-light text-ivory/70">
+              <li><a href="tel:+2348127936751" className="hover:text-gold">+234 812 793 6751</a></li>
+              <li><a href="mailto:marroneventsandusheringagency@gmail.com" className="hover:text-gold break-all">marroneventsandusheringagency@gmail.com</a></li>
+              <li><a href="https://instagram.com/marroneventsandushering" className="hover:text-gold">Instagram · @marroneventsandushering</a></li>
+              <li><a href="#" className="hover:text-gold">Facebook · Marron Events And Ushering</a></li>
             </ul>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs tracking-[0.28em] uppercase text-[color:var(--ivory)]/45">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs tracking-[0.28em] uppercase text-ivory/45">
           <div>© {new Date().getFullYear()} Marron Events and Ushering Agency</div>
           <div>Crafted with quiet precision</div>
         </div>
@@ -754,7 +755,7 @@ function Footer() {
 function HomePage() {
   useReveal();
   return (
-    <div className="bg-[color:var(--ivory)]">
+    <div className="bg-ivory">
       <Nav />
       <main>
         <Hero />
