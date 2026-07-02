@@ -78,7 +78,7 @@ function Nav() {
             <a
               key={n.href}
               href={n.href}
-              className="text-[11px] tracking-[0.28em] uppercase text-ivory/80 hover:text-gold transition-colors duration-500"
+              className="text-base font-medium tracking-[0.28em] uppercase text-ivory/80 hover:text-gold transition-colors duration-500"
             >
               {n.label}
             </a>
@@ -113,7 +113,7 @@ function Nav() {
               key={n.href}
               href={n.href}
               onClick={() => setOpen(false)}
-              className="text-sm tracking-[0.3em] uppercase text-ivory/85 hover:text-gold"
+              className="text-base font-medium tracking-[0.3em] uppercase text-ivory/85 hover:text-gold"
             >
               {n.label}
             </a>
