@@ -267,7 +267,7 @@ function About() {
               becomes an expression of the standard you set.
             </p>
           </div>
-
+          {/*
           <div className="reveal mt-14 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[color:var(--gold)]/30 pt-10">
             {stats.map((s) => (
               <div key={s.l}>
@@ -279,7 +279,7 @@ function About() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
