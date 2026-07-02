@@ -668,7 +668,7 @@ function Contact() {
               <Field label="Email" name="email" type="email" required />
               <Field label="Event Date" name="date" type="date" required />
               <div className="md:col-span-2">
-                <Field label="Event Type" name="eventType" placeholder="Wedding · Corporate · Gala · Brand Activation" />
+                <Field label="Event Type" name="eventType" placeholder="Wedding · Corporate · Birthday · Gala" />
               </div>
               <div className="md:col-span-2">
                 <label className="eyebrow text-(--charcoal)/60 block mb-3">Message</label>
@@ -676,7 +676,7 @@ function Contact() {
                   name="message"
                   rows={5}
                   className="w-full bg-transparent border-b border-(--charcoal)/25 focus:border-gold outline-none py-3 font-light text-crunharcoal resize-none transition-colors"
-                  placeholder="Tell us about your evening..."
+                  placeholder="Tell us about your event..."
                 />
               </div>
             </div>
