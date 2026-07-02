@@ -397,8 +397,8 @@ function Gallery() {
   const [active, setActive] = useState<string | null>(null);
   const imgs = [
     { src: m1, cat: "Corporate Lineup", size: "col-span-2 row-span-2" },
-    { src: m4, cat: "Hostess Duo", size: "" },
     { src: m3, cat: "Elegance", size: "" },
+    { src: m4, cat: "Hostess Duo", size: "" },
     { src: wedding, cat: "Wedding Reception", size: "col-span-2" },
     { src: m5, cat: "Reception Detail", size: "" },
     { src: m2, cat: "Team of Twelve", size: "col-span-2" },
